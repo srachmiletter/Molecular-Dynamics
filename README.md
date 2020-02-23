@@ -4,7 +4,9 @@
 
 In order to gain an understanding of molecular dynamics simulations, a sample system was generated. The goal of molecular dynamics simulations is to solve Newton's equations of motion for a system of particles, and after equilibrating, measure some observable quantity. The system of choice was a multidimensional fluid with a Lennard-Jones (LJ) interaction potential. The LJ potential was chosen due to available benchmark values and ease of simplified units. These dimensionless units are defined by choosing $\sigma$, $m$, and $\epsilon$ to be the units of length, mass, and energy, respectively, and making the following replacements for length, energy, and time:
 
-\begin{center}
+
+<img src="https://latex.codecogs.com/gif.latex?r\rightarrow&space;r\sigma" title="r\rightarrow r\sigma" />
+
 $r \rightarrow r\sigma$
 
 $E \rightarrow \epsilon E$
