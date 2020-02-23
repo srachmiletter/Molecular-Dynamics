@@ -2,7 +2,7 @@
 
 # Molecular Dynamics Simulation of a Lennard-Jones Fluid
 
-In order to gain an understanding of molecular dynamics simulations, a sample system was generated. The goal of molecular dynamics simulations is to solve Newton's equations of motion for a system of particles, and after equilibrating, measure some observable quantity. The system of choice was a multidimensional fluid with a Lennard-Jones (LJ) interaction potential. The LJ potential was chosen due to available benchmark values and ease of simplified units. These dimensionless units are defined by choosing $\sigma$, $m$, and $\epsilon$ to be the units of length, mass, and energy, respectively, and making the following replacements for length, energy, and time:
+In order to gain an understanding of molecular dynamics simulations, a sample system was generated. The goal of molecular dynamics simulations is to solve Newton's equations of motion for a system of particles, and after equilibrating, measure some observable quantity. The system of choice was a multidimensional fluid with a Lennard-Jones (LJ) interaction potential. The LJ potential was chosen due to available benchmark values and ease of simplified units. These dimensionless units are defined by choosing <img src="https://latex.codecogs.com/gif.latex?\sigma" title="\sigma" />, <img src="https://latex.codecogs.com/gif.latex?m" title="m" />, and <img src="https://latex.codecogs.com/gif.latex?\epsilon" title="\epsilon" /> to be the units of length, mass, and energy, respectively, and making the following replacements for length, energy, and time:
 
 
 <img src="https://latex.codecogs.com/gif.latex?r\rightarrow&space;r\sigma" title="r\rightarrow r\sigma" />
@@ -43,12 +43,10 @@ With this, the velocity Verlet method can be executed in the following three ste
 
 3: Calculate <img src="https://latex.codecogs.com/gif.latex?v\left(t&plus;dt\right)&space;=&space;v\left(t\right)&space;&plus;&space;\frac{1}{2}\left(a\left(t\right)&space;&plus;&space;a\left(t&plus;dt\right)\right)dt" title="v\left(t+dt\right) = v\left(t\right) + \frac{1}{2}\left(a\left(t\right) + a\left(t+dt\right)\right)dt" />.
 
-
-
 Once the position, velocity, and force of all particles can be calculated, so can the thermodynamic properties of interest. It is important to note that this velocity Verlet method is perfectly general, and any reasonable potential could be used to calculate the forces. As an example, the radial distribution function (RDF) as well as the velocity auto-correlation function of the system is shown below.
 
 ![](images/RDF.png)
 
 ![](images/vacf.png)
 
-In figure above, the first peak of the RDF is indicative of the first coordination shell of the liquid and later shows no recurrent structure, as expected. It is important to note that after the first peak, the RDF fluctuates about 1 and then goes to zero due to the lack of a periodic boundary condition for the sake of an accurate nearest neighbor count. If the periodic boundary condition was preserved, it would fluctuate about 1 indefinitely. Similarly, the velocity auto-correlation function in figure \ref{fig:vacf} quickly goes to zero and fluctuates about that point, showing no correlation to its previous structure. Together, these show the system has no ``memory'' of its past self, and are indicative of accurate simulation.
+In figure above, the first peak of the RDF is indicative of the first coordination shell of the liquid and later shows no recurrent structure, as expected. It is important to note that after the first peak, the RDF fluctuates about 1 and then goes to zero due to the lack of a periodic boundary condition for the sake of an accurate nearest neighbor count. If the periodic boundary condition was preserved, it would fluctuate about 1 indefinitely. Similarly, the velocity auto-correlation function quickly goes to zero and fluctuates about that point, showing no correlation to its previous structure. Together, these show the system has no "memory" of its past self, and are indicative of accurate simulation.
